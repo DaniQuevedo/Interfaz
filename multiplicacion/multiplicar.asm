@@ -13,28 +13,28 @@ _start:
     mov rsi, 20
     mov rdi, 5
     mov rax, rsi
-    imul rax, rdi        ; RAX = 20 * 5 = 100
+    imul rax, rdi        
     
-    push rax             ; Guardar el resultado
+    push rax             
     
     mov rax, 1
     mov rdi, 1
     mov rsi, msg_mul
     mov rdx, len_mul
-    syscall             ; Imprimir mensaje
+    syscall            
     
-    pop rax              ; Recuperar el resultado
-    call print_result    ; Imprimir el número
+    pop rax             
+    call print_result    
     
     mov rax, 1
     mov rdi, 1
     mov rsi, newline
     mov rdx, 1
-    syscall             ; Imprimir nueva línea
+    syscall           
     
     mov rax, 60
     xor rdi, rdi
-    syscall             ; Salir
+    syscall         
 
 print_result:
     mov rcx, 10
